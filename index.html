@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Jiya 💖</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- PHASE 1 -->
+<section class="screen active" id="screen1">
+  <h1>🎉 Happy Birthday<br>My Dear Jiya 💖</h1>
+  <p>Today is all about you ✨</p>
+  <button onclick="goTo('screen2')">Yaha pe dabao cutie 🥰</button>
+</section>
+
+<!-- PHASE 2 : BANK LOCKER -->
+<section class="screen" id="screen2">
+  <h2>🔐 Special Locker</h2>
+  <p>Enter the secret code</p>
+  <input type="password" id="codeInput" placeholder="____">
+  <button onclick="unlock()">Unlock</button>
+  <p id="error"></p>
+</section>
+
+<!-- PHASE 3 : TEDDY -->
+<section class="screen" id="screen3">
+  <div class="teddy">
+    <div class="head"></div>
+    <div class="body"></div>
+    <div class="hand left"></div>
+    <div class="hand right"></div>
+  </div>
+  <p>Teddy wants to take your hand 🧸</p>
+  <button onclick="goTo('screen4')">Take my hand 🤍</button>
+</section>
+
+<!-- PHASE 4 : WISHES + GIFT -->
+<section class="screen" id="screen4">
+  <h2>💌 For My Jiya</h2>
+  <p>
+    You are the most beautiful part of my life.<br>
+    Since you came, everything feels warmer, softer, happier.
+  </p>
+
+  <button onclick="openGift()">🎁 Open Gift</button>
+  <div id="giftText"></div>
+
+  <button id="continueBtn" onclick="goTo('screen5')" style="display:none;">
+    Chaliye ab celebration karte hai 😉
+  </button>
+</section>
+
+<!-- PHASE 5 : CAKE -->
+<section class="screen" id="screen5">
+  <h2>🎂 Make a Wish</h2>
+  <div class="cake" onclick="blowCandle()">
+    <div class="candle"></div>
+  </div>
+  <p>Tap the cake to blow candles</p>
+</section>
+
+<!-- PHASE 6 : FIREWORKS -->
+<section class="screen" id="screen6">
+  <video id="fireworks" src="assets/videos/fireworks.mp4" playsinline></video>
+  <h1>✨ Happiest Birthday<br>Meri Jiya 💖</h1>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

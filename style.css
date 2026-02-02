@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background: black;
+  color: white;
+  overflow: hidden;
+}
+
+.screen {
+  position: fixed;
+  inset: 0;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  animation: fadeIn 1s ease;
+}
+
+.screen.active {
+  display: flex;
+}
+
+h1, h2 {
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 14px 24px;
+  border: none;
+  border-radius: 30px;
+  background: hotpink;
+  color: white;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+input {
+  padding: 10px;
+  font-size: 18px;
+  text-align: center;
+  border-radius: 10px;
+  border: none;
+}
+
+@keyframes fadeIn {
+  from {opacity:0; transform:scale(0.95);}
+  to {opacity:1; transform:scale(1);}
+}
+
+/* TEDDY */
+.teddy {
+  position: relative;
+  width: 120px;
+  height: 180px;
+}
+.head, .body {
+  background: #c89b6a;
+  border-radius: 50%;
+}
+.head {
+  width: 100px;
+  height: 100px;
+  margin: auto;
+}
+.body {
+  width: 120px;
+  height: 100px;
+  margin-top: -10px;
+}
+.hand {
+  width: 40px;
+  height: 20px;
+  background: #c89b6a;
+  position: absolute;
+  top: 80px;
+}
+.left { left: -30px; animation: wave 1s infinite alternate; }
+.right { right: -30px; animation: wave 1s infinite alternate; }
+
+@keyframes wave {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(20deg);}
+}
+
+/* CAKE */
+.cake {
+  width: 150px;
+  height: 100px;
+  background: #ffb6c1;
+  border-radius: 10px;
+  position: relative;
+}
+.candle {
+  width: 10px;
+  height: 30px;
+  background: yellow;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
